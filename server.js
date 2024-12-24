@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Allowed IP addresses
-const allowedIPs = ['123.456.789.101', '111.222.333.444']; // Replace with your allowed IPs
+const allowedIPs = ['38.117.193.186']; // Replace with your allowed IPs
 
 // In-memory storage for blocked dates
 let blockedDates = [];
