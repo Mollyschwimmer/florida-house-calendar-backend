@@ -8,14 +8,10 @@ const allowedIPs = ['38.117.193.186', '184.152.72.177', '184.152.72.177', '192.1
 app.use((req, res, next) => {
   // Get the client IP address from the 'X-Forwarded-For' header or fallback to remoteAddress
   const clientIP = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(',')[0].trim();
-  
-  // Log the client IP address for every request
   console.log('Request received from IP:', clientIP);
 
   // Check if the client IP is allowed
   if (!allowedIPs.includes(clientIP)) {
-    // Log the denied IP
-    console.log(`Access denied for IP: ${clientIP}`);
     return res.status(403).json({ message: 'Access denied' });
   }
 
