@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Define allowed IP addresses (hardcoded)
-const allowedIPs = ['38.117.193.186', '184.152.72.177', '184.152.72.177', '192.157.92.88']; // Replace with actual IPs
+const allowedIPs = ['38.117.193.186', '184.152.72.177', '184.152.72.177', '192.157.92.88', '184.152.72.177']; // Replace with actual IPs
 
 // Middleware to check IP address before blocking dates
 app.use((req, res, next) => {
